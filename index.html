@@ -1,0 +1,181 @@
+<!doctype html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Documentação do Kit de Eletrônica</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Documentação dos materiais do kit</h1>
+      <div>Explicação simples do que é cada item e para que serve.</div>
+    </div>
+  </header>  <section class="grid"><article class="card">
+  <h3>BlackBoard UNO R3 <span class="meta">(1 unidade)</span></h3>
+  <div class="meta">Placa compatível com Arduino UNO.</div>
+  <p>Microcontrolador que serve como "cérebro" dos projetos: você conecta sensores, atuadores e programa para controlar o circuito.</p>
+  <ul>
+    <li>Usos: prototipagem, controlar motores, ler sensores.</li>
+    <li>Exemplo: piscar LEDs, ler um sensor de luz, controlar um servo.</li>
+  </ul>
+  <div class="example">Ex.: ligar um LED ao pino 13 e programar para piscar.</div>
+</article>
+
+<article class="card">
+  <h3>Protoboard 400 Pontos <span class="meta">(1 unidade)</span></h3>
+  <div class="meta">Placa de ensaio sem solda.</div>
+  <p>Permite montar circuitos temporários conectando componentes com jumpers. Ideal para testar circuitos antes de soldar.</p>
+  <ul>
+    <li>Usos: montar protótipos com LEDs, resistores, sensores.</li>
+    <li>Dica: observe trilhas horizontais/verticais da protoboard para fazer conexões corretas.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>WorkPlate 400 <span class="meta">(1 unidade)</span></h3>
+  <p>Base/plataforma para fixar a protoboard e a placa Arduino. Facilita organização do projeto.</p>
+</article>
+
+<article class="card">
+  <h3>Micro Servo Motor <span class="meta">(1 unidade)</span></h3>
+  <p>Motor de posição pequeno com engrenagem (tipicamente 0–180°). Possui três fios: alimentação (VCC), terra (GND) e sinal (PWM).</p>
+  <ul>
+    <li>Usos: controlar ângulo de braços, garras, ponteiros.</li>
+    <li>Exemplo: mover uma garra ou fazer um radar com um sensor ultrassônico.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>Módulo Joystick <span class="meta">(1 unidade)</span></h3>
+  <p>Stick analógico (e às vezes com botão). Fornece dois sinais analógicos (X e Y) e um sinal digital do clique.</p>
+  <ul>
+    <li>Usos: controlar movimentação em projetos, testar leitura analógica no Arduino.</li>
+    <li>Exemplo: mover um servomotor conforme posição do joystick.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>Sensor Ultrassônico (HC-SR04) <span class="meta">(1 unidade)</span></h3>
+  <p>Sensor de distância que emite um pulso ultrassônico e calcula o tempo até o eco para medir distância.</p>
+  <ul>
+    <li>Usos: robôs que evitam obstáculos, medição de níveis.</li>
+    <li>Exemplo: controlar um motor para parar quando algo estiver a menos de 20 cm.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>Potenciômetro 10 kΩ + Knob <span class="meta">(1 potenciômetro + 1 knob)</span></h3>
+  <p>Resistor variável com três terminais; girando-o você muda a tensão do pino central (sinal analógico).</p>
+  <ul>
+    <li>Usos: ajustar brilho de LEDs, velocidade de motores, entrada de usuário.</li>
+    <li>Exemplo: usar para ajustar intensidade de um LED PWM no Arduino.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>Chaves Momentâneas (push buttons) <span class="meta">(4 unidades)</span></h3>
+  <p>Botões que fecham o circuito apenas enquanto pressionados.</p>
+  <ul>
+    <li>Usos: entradas digitais para iniciar/pausar ações, seleção de modos.</li>
+    <li>Dica: use resistores de pull-up ou pull-down para leitura estável.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>Jumpers M/M e M/F <span class="meta">(30 M/M, 10 M/F)</span></h3>
+  <p>Fios com conectores para ligar componentes na protoboard e na placa Arduino (Male/Male e Male/Female).</p>
+  <ul>
+    <li>Usos: conexões rápidas entre pinos, sensores e protoboard.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>Mini Laser <span class="meta">(1 unidade)</span></h3>
+  <p>Pequeno emissor laser usado principalmente em demonstrações ou indicadores. Cuidado com os olhos.</p>
+  <ul>
+    <li>Usos seguros: apontador em protótipos (evite exposição direta aos olhos).</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>Display de 7 Segmentos <span class="meta">(1 unidade)</span></h3>
+  <p>Mostrador para números (0–9). Pode ser comum-cátodo ou comum-ânodo.</p>
+  <ul>
+    <li>Usos: exibir valores numéricos como contadores, tempo, sensores.</li>
+    <li>Exemplo: mostrar distância medida pelo ultrassônico.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>LDR (Fotoresistor) 5 mm <span class="meta">(1 unidade)</span></h3>
+  <p>Sensor de luz cuja resistência varia conforme a luminosidade.</p>
+  <ul>
+    <li>Usos: detectar luminosidade ambiente, acionar LEDs automáticos.</li>
+    <li>Exemplo: ligar um LED quando ficar escuro.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>Sensor DHT11 (Temperatura e Umidade) <span class="meta">(1 unidade)</span></h3>
+  <p>Sensor digital que retorna temperatura e umidade relativas (fácil de usar, boa para projetos educativos).</p>
+  <ul>
+    <li>Usos: estações meteorológicas caseiras, controle de ambientes.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>Garra Articulada <span class="meta">(1 unidade)</span></h3>
+  <p>Mecanismo tipo garra para segurar objetos, normalmente acionada por servomotor.</p>
+  <ul>
+    <li>Usos: projetos robóticos com agarre, braços simulados.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>CI 4511 (Driver de Display) <span class="meta">(1 unidade)</span></h3>
+  <p>Circuito integrado que facilita controlar displays de 7 segmentos a partir de entradas BCD.</p>
+  <ul>
+    <li>Usos: simplificar a interface entre microcontrolador e display numérico.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>Buzzer <span class="meta">(1 unidade)</span></h3>
+  <p>Emissor de som (pode ser piezo). Usado para alertas sonoros e sinais audíveis.</p>
+  <ul>
+    <li>Usos: alarmes, feedback em botões, efeitos sonoros simples.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>LED RGB <span class="meta">(1 unidade)</span></h3>
+  <p>LED que combina vermelho, verde e azul para criar várias cores por PWM.</p>
+  <ul>
+    <li>Usos: indicadores coloridos, efeitos visuais, aprender PWM.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>LED Alto Brilho e LEDs coloridos <span class="meta">(1 alto brilho; 5 verdes; 5 amarelos; 5 vermelhos)</span></h3>
+  <p>LEDs simples para sinalização visual. Sempre use resistor em série para limitar corrente.</p>
+  <ul>
+    <li>Usos: indicadores, painéis de status, sinais em projetos.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>Resistores (10 kΩ e 330 Ω) </span></h3>
+  <p>Componentes que limitam corrente ou formam divisores de tensão. 330Ω comumente usados em série com LEDs; 10kΩ como pull-up/pull-down.</p>
+</article>
+
+<div class="card">
+    <h3> Chave Philips</h3>
+    <p>Componentes que limitam corrente ou formam divisores de tensão. 330Ω comumente usados em série com LEDs; 10kΩ como pull-up/pull-down.</p>
+</div>
+
+  </section> 
+</body>
+</html>
