@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Documentação das Funções Arduino</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Funções do Código Arduino</h1>
+    <p>Cada função do projeto foi documentada com descrição, parâmetros e retorno.</p>
+  </header>
+
+ <nav>
+    <h3>Componentes:</h3>
+    <ul>
+      <li><a href="funcoes.html">Funções Arduino</a></li>
+      <li><a href="index.html" href="#blackboard-uno">BlackBoard UNO R3</a></li>
+      <li><a href="index.html" href="#protoboard">Protoboard</a></li>
+      <li><a href="index.html" href="#workplate">WorkPlate</a></li>
+      <li><a href="index.html" href="#servo">Micro Servo</a></li>
+      <li><a href="index.html" href="#joystick">Joystick</a></li>
+      <li><a href="index.html" href="#ultrassonico">Sensor Ultrassônico</a></li>
+      <li><a href="index.html" href="#potenciometro">Potenciômetro</a></li>
+      <li><a href="index.html" href="#push-buttons">Push Buttons</a></li>
+      <li><a href="index.html" href="#jumpers">Jumpers</a></li>
+      <li><a href="index.html" href="#laser">Mini Laser</a></li>
+      <li><a href="index.html" href="#display-7seg">Display 7 Segmentos</a></li>
+      <li><a href="index.html" href="#ldr">LDR</a></li>
+      <li><a href="index.html" href="#dht11">DHT11</a></li>
+      <li><a href="index.html" href="#garra">Garra Articulada</a></li>
+      <li><a href="index.html" href="#ci-4511">CI 4511</a></li>
+      <li><a href="index.html" href="#buzzer">Buzzer</a></li>
+      <li><a href="index.html" href="#led-rgb">LED RGB</a></li>
+      <li><a href="index.html" href="#leds">LEDs Coloridos</a></li>
+      <li><a href="index.html" href="#resistores">Resistores</a></li>
+      <li><a href="index.html" href="#chave-philips">Chave Philips</a></li>
+
+    </ul>
+  </nav>
+
+  <div class="grid">
+
+      <div class="card">
+      <h3>FUNÇÃO: motorControl()</h3>
+      <p>
+// ==============================================================================
+// FUNÇÃO: motorControl()
+// DESCRIÇÃO: Controla a velocidade e direção dos motores esquerdo e direito
+// PARÂMETROS:
+//   - speedLeft: velocidade do motor esquerdo (-255 a 255)
+//                valores negativos = sentido reverso
+//   - speedRight: velocidade do motor direito (-255 a 255)
+//                 valores negativos = sentido reverso
+// RETORNO: void
+// ==============================================================================
+void motorControl(int speedLeft, int speedRight) {
+  analogWrite(pinMotorLeft, abs(speedLeft));
+  analogWrite(pinMotorRight, abs(speedRight));
+}
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>FUNÇÃO: readDistance()</h3>
+      <p>
+// ==============================================================================
+// FUNÇÃO: readDistance()
+// DESCRIÇÃO: Mede a distância usando o sensor ultrassônico HC-SR04
+// PARÂMETROS: nenhum
+// RETORNO: float (distância em centímetros)
+// ==============================================================================
+float readDistance() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  long duration = pulseIn(echoPin, HIGH);
+  return duration * 0.034 / 2;
+}
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    <h4>Equipe:</h4>
+    <p>Arthur Lombardo</p>
+    <p>Esther Rigol</p>
+    <p>Karen Amancio</p>
+    <p>Mirella Melo</p>
+  </footer>
+</body>
+</html>
